@@ -1,0 +1,36 @@
+<!-- //it is the base template -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atom To do list</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="box" id="heading">
+    <h1><%= listTitle %></h1>
+  </div>
+
+  <div class="box"><% for (let i = 0 ; i < newlistitems.length;i++){ %>
+    <div class="item">
+    <input type="checkbox">
+      <p><%= newlistitems[i] %></p>
+    </div>
+ <% } %>
+    <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="Add New To Do here" autocomplete="off">
+      <button type="submit" name="" value="<% listTitle %> ">+</button>
+    </form>
+  </div>
+
+
+
+  <!-- <p>continue learning the subjects</p> -->
+  <script src="app.js"></script>
+</body>
+
+</html>
